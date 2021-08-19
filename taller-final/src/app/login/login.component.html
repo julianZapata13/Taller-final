@@ -19,10 +19,12 @@
 						</div>
 						<input type="password" class="form-control" placeholder="password" [(ngModel)]="pass">
 					</div>
-                    
+                    <div style="text-align: center;">
+                        <label *ngIf="error==true" class="errorValidacion">Loa datos ingresados son incorrectos</label>
+                    </div>
                     
 					<div class="form-group">
-						<input type="submit" value="Login" class="btn float-right login_btn">
+						<input (click)="validarSesion()" type="submit" value="Login" class="btn float-right login_btn">
 					</div>
 				
 			</div>

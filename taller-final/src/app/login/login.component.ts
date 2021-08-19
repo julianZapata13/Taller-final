@@ -18,6 +18,16 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  validarSesion(){
+
+    if((this.servicePelicula.datosSesion[0].user)==(this.usuario)&&(this.servicePelicula.datosSesion[0].password)==(this.pass)){
+      this.servicePelicula.cambiarSesion();
+    }
+    else{
+      this.error=true;
+    }
+  }
+
  
 
 }
